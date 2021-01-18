@@ -23,11 +23,11 @@ public class Movie implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	private String title;
-	private String subtitle;
+	private String subTitle;
 	private Integer year;
 	private String imgUrl;
 	@Column(columnDefinition="TEXT")
-	private String synosis;
+	private String synopsis;
 	
 	@ManyToOne
 	@JoinColumn(name = "genre_id")
@@ -36,14 +36,14 @@ public class Movie implements Serializable{
 	@OneToMany(mappedBy = "movie")
 	private List<Review> reviews = new ArrayList<>();
 	
-	public Movie(Long id, String title, String subtitle, Integer year, String imgUrl, String synosis, Genre genre) {
+	public Movie(Long id, String title, String subTitle, Integer year, String imgUrl, String synopsis, Genre genre) {
 		super();
 		this.id = id;
 		this.title = title;
-		this.subtitle = subtitle;
+		this.subTitle = subTitle;
 		this.year = year;
 		this.imgUrl = imgUrl;
-		this.synosis = synosis;
+		this.synopsis = synopsis;
 		this.genre = genre;
 	}
 
@@ -65,12 +65,12 @@ public class Movie implements Serializable{
 		this.title = title;
 	}
 
-	public String getSubtitle() {
-		return subtitle;
+	public String getSubTitle() {
+		return subTitle;
 	}
 
-	public void setSubtitle(String subtitle) {
-		this.subtitle = subtitle;
+	public void setSubTitle(String subTitle) {
+		this.subTitle = subTitle;
 	}
 
 	public Integer getYear() {
@@ -89,12 +89,12 @@ public class Movie implements Serializable{
 		this.imgUrl = imgUrl;
 	}
 
-	public String getSynosis() {
-		return synosis;
+	public String getSynopsis() {
+		return synopsis;
 	}
 
-	public void setSynosis(String synosis) {
-		this.synosis = synosis;
+	public void setSynopsis(String synopsis) {
+		this.synopsis = synopsis;
 	}
 
 	public Genre getGenre() {
