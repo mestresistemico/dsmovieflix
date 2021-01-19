@@ -1,4 +1,4 @@
-package com.devsuperior.movieflix.tests.web.it;
+package com.mestresistemico.dsmovieflix.tests.web.it;
 
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.httpBasic;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -21,9 +21,9 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
-import com.devsuperior.movieflix.dto.GenreDTO;
-import com.devsuperior.movieflix.repositories.GenreRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mestresistemico.dsmovieflix.dto.GenreDTO;
+import com.mestresistemico.dsmovieflix.repositories.GenreRepository;
 
 @SpringBootTest
 @AutoConfigureMockMvc
