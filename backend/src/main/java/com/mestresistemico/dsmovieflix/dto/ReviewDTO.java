@@ -4,26 +4,26 @@ import java.io.Serializable;
 
 import javax.validation.constraints.NotBlank;
 
-import com.mestresistemico.dsmovieflix.entities.Genre;
+import com.mestresistemico.dsmovieflix.entities.Review;
 
-public class GenreDTO implements Serializable{
+public class ReviewDTO implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	private Long id;
 	@NotBlank(message = "Campo obrigatório")
-	private String name;
+	private String text;
 	
-	public GenreDTO () {}
+	public ReviewDTO () {}
 	
-	public GenreDTO(Long id, String name) {
+	public ReviewDTO(Long id, String text) {
 		super();
 		this.id = id;
-		this.name = name;
+		this.text = text;
 	}
 
-	public GenreDTO(Genre entity) {
+	public ReviewDTO(Review entity) {
 		id = entity.getId();
-		name = entity.getName();
+		text = entity.getText();
 	}
 
 	public Long getId() {
@@ -34,11 +34,11 @@ public class GenreDTO implements Serializable{
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getText() {
+		return text;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setText(String text) {
+		this.text = text;
 	}
 }

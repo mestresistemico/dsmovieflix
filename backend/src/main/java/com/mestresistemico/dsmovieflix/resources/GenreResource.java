@@ -1,4 +1,4 @@
-package com.mestresistemico.dsmovieflix.resource;
+package com.mestresistemico.dsmovieflix.resources;
 
 import java.util.List;
 
