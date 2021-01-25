@@ -3,22 +3,18 @@
 
 # Sobre o projeto
 
-(A ser enviado) https://mestresistemico-sds1.netlify.app
+https://mestresistemico-dsmovieflix.herokuapp.com/
 
-Movieflix é uma aplicação full stack web e mobile construída durante a 2ª edição do Bootcamp, curso desenvolvedor fullstask da [DevSuperior](https://devsuperior.com "Site da DevSuperior").
+Movieflix é uma aplicação full stack web e mobile construída durante a 2ª edição do Bootcamp, curso desenvolvedor fullstask da [DevSuperior](https://github.com/devsuperior/ "Github da DevSuperior").
 
 A aplicação consiste em um catálogo de filmes acessados via web e mobile, que podem ser consultados por visitantes cadastrados e revisados por usuários membro.
 
-## Layout mobile
-![Mobile 1](https://github.com/acenelio/assets/raw/main/sds1/mobile1.png) ![Mobile 2](https://github.com/acenelio/assets/raw/main/sds1/mobile2.png)
-
-## Layout web
-![Web 1](https://github.com/acenelio/assets/raw/main/sds1/web1.png)
-
-![Web 2](https://github.com/acenelio/assets/raw/main/sds1/web2.png)
+## Layouts mobile e web
+![Layout web](https://github.com/mestresistemico/dsmovieflix/blob/main/dsmovieflix_layout_web.jpg)
+![Layout mobile](https://github.com/mestresistemico/dsmovieflix/blob/main/dsmovieflix_layout_mobile.jpg)
 
 ## Modelo conceitual
-![Modelo Conceitual](https://github.com/acenelio/assets/raw/main/sds1/modelo-conceitual.png)
+![Modelo Conceitual](https://github.com/mestresistemico/dsmovieflix/blob/main/dsmovieflix_modelo_conceitual.jpg)
 
 # Tecnologias utilizadas
 ## Back end
@@ -32,7 +28,7 @@ A aplicação consiste em um catálogo de filmes acessados via web e mobile, que
 - React Native
 ## Implantação em produção
 - Back end: Heroku
-- Front end web: Netlify
+(a implementar)- Front end web: Netlify
 - Banco de dados: Postgresql
 
 # Como executar o projeto
