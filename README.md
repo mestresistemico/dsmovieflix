@@ -5,12 +5,13 @@
 
 https://mestresistemico-dsmovieflix.herokuapp.com/
 
-Movieflix é uma aplicação full stack web e mobile construída durante a 2ª edição do Bootcamp, curso desenvolvedor fullstask da [DevSuperior](https://devsuperior.com "Site da DevSuperior").
+Movieflix é uma aplicação full stack web e mobile construída durante a 2ª edição do Bootcamp, curso desenvolvedor fullstask da [DevSuperior](https://github.com/devsuperior/ "Github da DevSuperior").
 
 A aplicação consiste em um catálogo de filmes acessados via web e mobile, que podem ser consultados por visitantes cadastrados e revisados por usuários membro.
 
 ## Layouts mobile e web
-![Layouts](https://www.figma.com/file/cOjZ9zvM7U9hrZrL3AReSA/Desafio-MovieFlix)
+![Layout web](https://github.com/mestresistemico/dsmovieflix/blob/main/dsmovieflix_layout_web.jpg)
+![Layout mobile](https://github.com/mestresistemico/dsmovieflix/blob/main/dsmovieflix_layout_mobile.jpg)
 
 ## Modelo conceitual
 ![Modelo Conceitual](https://github.com/mestresistemico/dsmovieflix/blob/main/dsmovieflix_modelo_conceitual.jpg)
