@@ -1,11 +1,11 @@
-# Big Game Survey 
+# Movieflix
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/mestresistemico/dsmovieflix/blob/main/LICENSE) 
 
 # Sobre o projeto
 
 (A ser enviado) https://mestresistemico-sds1.netlify.app
 
-DSMoviefliz é uma aplicação full stack web e mobile construída durante a 2ª edição do Bootcamp, curso desenvolvedor fullstask da [DevSuperior](https://devsuperior.com "Site da DevSuperior").
+Movieflix é uma aplicação full stack web e mobile construída durante a 2ª edição do Bootcamp, curso desenvolvedor fullstask da [DevSuperior](https://devsuperior.com "Site da DevSuperior").
 
 A aplicação consiste em um catálogo de filmes acessados via web e mobile, que podem ser consultados por visitantes cadastrados e revisados por usuários membro.
 
