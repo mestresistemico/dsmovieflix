@@ -1,0 +1,31 @@
+.auth-card{
+    padding: 95px 50px 50px 50px;
+    border-radius: 20px;
+    width: 550px;
+}
+
+.auth-card-title{
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 65px;
+    text-align: center;
+    letter-spacing: -0.015em;
+    color: #fff;
+}
+
+//tablet breakpoints
+@media (max-width: 768px){
+}
+
+//mobile breakpoints
+@media (max-width: 576px){
+    .auth-card {
+        width: 90wv;
+        margin: 0 auto;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}

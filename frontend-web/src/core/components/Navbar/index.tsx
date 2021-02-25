@@ -11,8 +11,8 @@ const Navbar = () => {
 
     useEffect(() => {
         const currentUserData = getAccessTokenDecoded();
-        //        setCurrentUser(currentUserData.user_name);
-        setCurrentUser('Aurélio');
+        setCurrentUser(currentUserData.user_name);
+//        setCurrentUser('Aurélio');
     }, [location]);
 
 
