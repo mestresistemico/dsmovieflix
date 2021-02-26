@@ -1,0 +1,56 @@
+.movie-card{
+    padding: 25px 0px 25px 0px;
+    text-align: center;
+}
+
+.movie-info{
+    padding: 15px 15px 15px 15px;
+    text-align: left;
+}
+
+.movie-title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #FFFFFF;
+}
+
+.movie-year{
+    position: inherit;
+    top: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.015em;
+    color: #FFC700;
+}
+
+.movie-subtitle{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.015em;
+    color: #FFFFFF;
+}
+
+.movie-card-image{
+    width: 100%;
+    height: 160px;
+}
+
+//tablet breakpoints
+@media (max-width: 768px){
+    .menu-container {
+        justify-content: flex-end;
+    }
+}
+//mobile breakpoints
+@media (max-width: 576px){
+    .movie-card{
+        padding: 10px 10px 30px 10px;
+    }
+}

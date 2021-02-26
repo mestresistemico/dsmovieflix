@@ -1,13 +1,10 @@
 import React from 'react';
-import { Router, Switch, Route, Redirect} from 'react-router-dom';
+import { Router, Switch, Route, Redirect } from 'react-router-dom';
 import Navbar from 'core/components/Navbar';
 import Auth from 'pages/Auth';
 import Movies from 'pages/Movies';
 import history from 'core/utils/history';
-//import MovieDetails from 'pages/Movies/components/MovieDetails';
-//<Route path="/movies/:movieId">
-//<MovieDetails />
-//</Route>
+import MovieDetails from 'pages/Movies/components/MovieDetails';
 
 const Routes = () => (
     <Router history={history}>
@@ -20,6 +17,9 @@ const Routes = () => (
             </Route>
             <Route path="/movies" exact>
                 <Movies />
+            </Route>
+            <Route path="/movies/:movieId">
+                <MovieDetails />
             </Route>
         </Switch>
     </Router>
