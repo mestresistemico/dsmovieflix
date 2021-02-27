@@ -2,7 +2,8 @@ export type MoviesResponse = {
     content: Movie[];
     totalPages: number;
 }
-    export type Movie = {
+
+export type Movie = {
     id: number;
     title: string;
     subTitle: string;
@@ -17,6 +18,10 @@ export type MoviesResponse = {
 export type Genre = {
     id: number;
     name: string;
+}
+
+export type ReviewsResponse = {
+    content: Review[];
 }
 
 export type Review = {

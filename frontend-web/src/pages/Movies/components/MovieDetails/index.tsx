@@ -3,9 +3,11 @@ import { Link, useParams } from 'react-router-dom';
 import './styles.scss'
 import { ReactComponent as ArrowIcon } from 'core/assets/images/arrow.svg';
 import { makePrivateRequest } from 'core/utils/request';
-import { Movie } from 'core/types/Movie';
+import { Movie, ReviewsResponse } from 'core/types/Movie';
 import MovieInfoLoader from '../Loaders/MovieInfoLoader';
 import MovieDescriptionLoader from '../Loaders/MovieDescriptionLoader';
+import ReviewCardLoader from '../Loaders/ReviewCardLoader';
+import ReviewCard from '../ReviewCard';
 
 type ParamsType = {
     movieId: string;
@@ -15,6 +17,7 @@ const MovieDetails = () => {
     const { movieId } = useParams<ParamsType>();
 
     const [movie, setMovie] = useState<Movie>();
+    const [reviewsResponse, setReviewsResponse] = useState<ReviewsResponse>();
     const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
@@ -28,10 +31,10 @@ const MovieDetails = () => {
 
     return (
         <div className="movie-details-container">
-                <Link to="/movies" className="movie-details-goback">
-                    <ArrowIcon className="icon-goback" />
-                    <h1 className="text-goback">voltar</h1>
-                </Link>
+            <Link to="/movies" className="movie-details-goback">
+                <ArrowIcon className="icon-goback" />
+                <h1 className="text-goback">voltar</h1>
+            </Link>
             <div className="card-base border-radius-10 movie-details">
                 <div className="movie-details-info">
                     <div className="movie-details-img">
@@ -65,6 +68,13 @@ const MovieDetails = () => {
                     </div>
                 </div>
             </div>
+            <div className='review-list-container'>
+                {isLoading ? <ReviewCardLoader /> : (
+                    reviewsResponse?.content.map(review => (
+                        <ReviewCard review={review} key={review.id}/>))
+                )}
+            </div>
+
         </div>
     );
 };
