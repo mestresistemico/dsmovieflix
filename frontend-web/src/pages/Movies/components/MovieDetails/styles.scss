@@ -1,18 +1,13 @@
 .movie-details-container{
-    margin: 40px 0px;
-    padding: 0px 40px;
-
-    .movie-price-container {
-        margin-top: 30px;
-    }
+    padding: 35px 135px 15px 135px;
+    background: #525252;
 }
 
 .movie-details{
-    padding: 50px 60px 90px 60px;
+    padding: 25px 30px 30px 15px;
 }
 
 .icon-goback{
-    color: #407BFF;
     transform: rotate(-180deg);
     margin-right: 30px;
 }
@@ -33,41 +28,49 @@
 
 .movie-details-card{
     width: 100%;
-    border: 1px solid #E1E1E1;
-    border-radius: 20px;
-    padding: 38px 29px;
 }
 
 .movie-details-image{
-    width: 353px;
-    height: 353px;
+    width: 525px;
+    height: 320px;
 }
 
-.movie-description-title{
-    font-size: 24px;
-    line-height: 33px;
-    letter-spacing: -0.015em;
-    color: #9E9E9E;
-    margin-bottom: 25px;
-}
-
-.movie-description-text{
-    font-size: 18px;
-    line-height: 25px;
-    letter-spacing: -0.015em;
-    color: #9E9E9E;
-}
-
-.movie-details-name{
+.movie-details-title{
+    font-weight: bold;
     font-size: 36px;
     line-height: 49px;
     letter-spacing: -0.015em;
-    color: #263238;
-    margin-top: 35px;
+    color: #FFFFFF;
 }
 
-.movie-details .movie-price{
-    font-size: 48px;
+.movie-details-year{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: -0.015em;
+    color: #FFC700;
+}
+
+.movie-details-subtitle{
+    margin-top: -10px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.015em;
+    color: #FFFFFF;
+}
+
+.movie-synopsis-text{
+    width: 100%;
+    padding: 15px 30px 10px 20px;
+    border: 1px solid #E1E1E1;
+    border-radius: 20px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: justify;
+    letter-spacing: -0.015em;
+    color: #9E9E9E;
 }
 
 .movie-details-info{
@@ -75,7 +78,7 @@
     flex-direction: row;
 }
 
-.movie-details-img-name-price{
+.movie-details-img{
     display: flex;
     flex-direction: column;
     padding-right: 30px;
@@ -106,10 +109,6 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-    }
-
-    .movie-description-text{
-        width: 460px;
     }
 }
 //mobile breakpoints
@@ -143,9 +142,5 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    .movie-description-text{
-        width: 90%;
     }
 }

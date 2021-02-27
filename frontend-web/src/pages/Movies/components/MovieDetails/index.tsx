@@ -28,22 +28,17 @@ const MovieDetails = () => {
 
     return (
         <div className="movie-details-container">
-            <div className="card-base border-radius-20 movie-details">
                 <Link to="/movies" className="movie-details-goback">
                     <ArrowIcon className="icon-goback" />
                     <h1 className="text-goback">voltar</h1>
                 </Link>
+            <div className="card-base border-radius-10 movie-details">
                 <div className="movie-details-info">
-                    <div className="movie-details-img-name-price">
+                    <div className="movie-details-img">
                         {isLoading ? <MovieInfoLoader /> : (
                             <>
                                 <div className="movie-details-card text-center">
                                     <img src={movie?.imgUrl} alt={movie?.title} className="movie-details-image" />
-                                </div>
-                                <div className='movie-info-fields'>
-                                    <h1 className="movie-details-name">
-                                        {movie?.title}
-                                    </h1>
                                 </div>
                             </>
                         )}
@@ -51,11 +46,19 @@ const MovieDetails = () => {
                     <div className="movie-details-card">
                         {isLoading ? <MovieDescriptionLoader /> : (
                             <>
-                                <h1 className="movie-description-title">
-                                    Descrição do produto
-                                </h1>
-                                <p className="movie-description-text">
-                                    {movie?.subTitle}
+                                <div className='movie-info-fields'>
+                                    <h1 className="movie-details-title">
+                                        {movie?.title}
+                                    </h1>
+                                    <h2 className="movie-details-year">
+                                        {movie?.year}
+                                    </h2>
+                                    <h3 className="movie-details-subtitle">
+                                        {movie?.subTitle}
+                                    </h3>
+                                </div>
+                                <p className="movie-synopsis-text">
+                                    {movie?.synopsis}
                                 </p>
                             </>
                         )}

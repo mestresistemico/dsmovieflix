@@ -8,6 +8,7 @@ export type MoviesResponse = {
     subTitle: string;
     year: number;
     imgUrl: string;
+    synopsis: string;
     genreId: number;
     genreName: string;
     review: Review[];
