@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import './styles.scss'
 import { ReactComponent as ArrowIcon } from 'core/assets/images/arrow.svg';
 import { makePrivateRequest } from 'core/utils/request';
-import { Movie, ReviewsResponse } from 'core/types/Movie';
+import { Movie, Review } from 'core/types/Movie';
 import MovieInfoLoader from '../Loaders/MovieInfoLoader';
 import MovieDescriptionLoader from '../Loaders/MovieDescriptionLoader';
 import ReviewCardLoader from '../Loaders/ReviewCardLoader';
@@ -17,13 +17,24 @@ const MovieDetails = () => {
     const { movieId } = useParams<ParamsType>();
 
     const [movie, setMovie] = useState<Movie>();
-    const [reviewsResponse, setReviewsResponse] = useState<ReviewsResponse>();
+    const [reviews, setReviews] = useState<Review[]>([]);
     const [isLoading, setIsLoading] = useState(false);
+    const [isLoadingReview, setIsLoadingReview] = useState(false);
 
     useEffect(() => {
         setIsLoading(true);
         makePrivateRequest({ url: `/movies/${movieId}` })
-            .then(response => setMovie(response.data))
+            .then(response => {
+                setMovie(response.data);
+                setIsLoadingReview(true);
+                makePrivateRequest({ url: `/reviews/${movieId}` })
+                    .then(revResponse => {
+                        setReviews(revResponse.data);
+                    })
+                    .finally(() => {
+                        setIsLoadingReview(false);
+                    })
+            })
             .finally(() => {
                 setIsLoading(false);
             })
@@ -68,13 +79,12 @@ const MovieDetails = () => {
                     </div>
                 </div>
             </div>
-            <div className='review-list-container'>
-                {isLoading ? <ReviewCardLoader /> : (
-                    reviewsResponse?.content.map(review => (
-                        <ReviewCard review={review} key={review.id}/>))
+            <div className='card-base review-list-container'>
+                {isLoadingReview ? <ReviewCardLoader /> : (
+                    reviews?.map(review => (
+                        <ReviewCard review={review} key={review.id} />))
                 )}
             </div>
-
         </div>
     );
 };

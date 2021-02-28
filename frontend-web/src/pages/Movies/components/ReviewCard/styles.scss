@@ -1,41 +1,49 @@
-.review-card-admin {
-    margin-bottom: 20px;
-    padding: 10px 20px;
+.card-content {
+    margin: 0px 20px 0px 15px;
     border-radius: 10px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    .review-currency {
-        font-size: 14px;
-    }
-
-    .review-price {
-        font-size: 24px;
-    }
+    flex-direction: column;
 }
 
-.review-card-image-admin{
-    width: 100px;
-    height: 100px;
-    margin: 0px 10px;
+.review-card-star-name{
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.review-card-star {
+    display: flex;
+    flex-direction: row;
 }
 
 .review-card-username {
-    font-size: 18px;
-    line-height: 25px;
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
     letter-spacing: -0.015em;
-    color: #263238;
+    color: #FFFFFF;
+    margin-left: 15px;
 }
 
-.card-content{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    flex: 1;
-    padding-left: 30px;
+.review-card-text{
+    border: 1px solid #E1E1E1;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: justify;
+    letter-spacing: -0.015em;
+    color: #9E9E9E;
 }
+
 
 //tablet breakpoints
 @media (max-width: 768px){
