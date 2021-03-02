@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import './styles.scss'
 import { ReactComponent as ArrowIcon } from 'core/assets/images/arrow.svg';
 import { makePrivateRequest } from 'core/utils/request';
 import { Movie, Review } from 'core/types/Movie';
@@ -8,6 +7,9 @@ import MovieInfoLoader from '../Loaders/MovieInfoLoader';
 import MovieDescriptionLoader from '../Loaders/MovieDescriptionLoader';
 import ReviewCardLoader from '../Loaders/ReviewCardLoader';
 import ReviewCard from '../ReviewCard';
+import { isAllowedByRole } from 'core/utils/auth';
+import './styles.scss'
+import ReviewInsert from './ReviewInsert';
 
 type ParamsType = {
     movieId: string;
@@ -20,9 +22,11 @@ const MovieDetails = () => {
     const [reviews, setReviews] = useState<Review[]>([]);
     const [isLoading, setIsLoading] = useState(false);
     const [isLoadingReview, setIsLoadingReview] = useState(false);
+    const [newReview, setNewReview] = useState(false);
 
     useEffect(() => {
         setIsLoading(true);
+        setNewReview(false);
         makePrivateRequest({ url: `/movies/${movieId}` })
             .then(response => {
                 setMovie(response.data);
@@ -38,7 +42,7 @@ const MovieDetails = () => {
             .finally(() => {
                 setIsLoading(false);
             })
-    }, [movieId]);
+    }, [movieId, newReview]);
 
     return (
         <div className="movie-details-container">
@@ -79,6 +83,10 @@ const MovieDetails = () => {
                     </div>
                 </div>
             </div>
+            {isAllowedByRole(['ROLE_MEMBER']) && (
+                <ReviewInsert
+                    movieId={movie?.id}
+                />)}
             <div className='card-base review-list-container'>
                 {isLoadingReview ? <ReviewCardLoader /> : (
                     reviews?.map(review => (
