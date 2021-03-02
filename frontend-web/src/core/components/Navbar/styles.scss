@@ -17,6 +17,10 @@
 .nav-logo-text{
     width: 30%;
     color: #000;
+    text-decoration: none !important;
+    &:hover {
+        color: unset;
+    }
 }
 
 .menu-mobile-container{

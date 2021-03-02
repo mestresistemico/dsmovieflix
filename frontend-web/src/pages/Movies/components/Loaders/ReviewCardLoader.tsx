@@ -9,8 +9,8 @@ const ReviewCardLoader = () => (
     backgroundColor="#ecebeb"
     foregroundColor="#d6d2d2"
   >
-    <rect x="0" y="0" rx="10" ry="10" width="2000" height="131" />
-    <rect x="0" y="150" rx="10" ry="10" width="2000" height="131" />
+    <rect x="0" y="0" rx="10" ry="10" width="1165" height="131" />
+    <rect x="0" y="150" rx="10" ry="10" width="1165" height="131" />
   </ContentLoader>
 )
 

@@ -19,7 +19,7 @@ const Catalog = () => {
     const getMovies = useCallback(() => {
         const params = {
             page: activePage,
-            linesPerPage: 12,
+            linesPerPage: 8,
             genreId: genre?.id
         }
         setIsLoading(true);
