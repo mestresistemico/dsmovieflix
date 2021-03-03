@@ -17,7 +17,7 @@ const Auth = () => (
         </div>
         <div className='auth-content'>
             <Switch>
-                <Route path="/auth/login">
+                <Route path="/">
                     <Login />
                 </Route>
             </Switch>

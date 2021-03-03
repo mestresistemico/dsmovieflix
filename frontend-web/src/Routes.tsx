@@ -1,21 +1,19 @@
 import React from 'react';
-import { Router, Switch, Route, Redirect } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 import Navbar from 'core/components/Navbar';
 import Auth from 'pages/Auth';
 import Movies from 'pages/Movies';
-import history from 'core/utils/history';
 import MovieDetails from 'pages/Movies/components/MovieDetails';
+import history from 'core/utils/history';
 
 const Routes = () => (
     <Router history={history}>
         <Navbar />
         <Switch>
-            <Redirect from="/" to="/auth/login" exact />
-            <Redirect from="/auth" to="/auth/login" exact />
-            <Route path="/auth/login">
+            <Route exact={true} path="/">
                 <Auth />
             </Route>
-            <Route path="/movies" exact>
+            <Route exact={true} path="/movies">
                 <Movies />
             </Route>
             <Route path="/movies/:movieId">
