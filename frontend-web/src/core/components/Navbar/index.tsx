@@ -38,16 +38,14 @@ const Navbar = () => {
                 <ul className="main-menu">
                     {drawerActive && (
                         <li>
-                            {currentUser && (
-                                <a href='#logout'
-                                    className='nav-link active d-inline'
-                                    onClick={(e) => {
-                                        setDrawerActive(false);
-                                        handleLogout(e);
-                                    }}>
-                                    SAIR
+                            <a href='#logout'
+                                className='nav-link active d-inline'
+                                onClick={(e) => {
+                                    setDrawerActive(false);
+                                    handleLogout(e);
+                                }}>
+                                SAIR
                                 </a>
-                            )}
                         </li>
 
                     )}
