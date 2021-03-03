@@ -3,7 +3,7 @@
 
 # Sobre o projeto
 
-https://mestresistemico-dsmovieflix.herokuapp.com/
+https://mestresistemico-dsmovieflix.netlify.app/
 
 Movieflix é uma aplicação full stack web e mobile construída durante a 2ª edição do Bootcamp, curso desenvolvedor fullstask da [DevSuperior](https://github.com/devsuperior/ "Github da DevSuperior").
 
