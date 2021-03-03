@@ -3,12 +3,6 @@
     padding: 25px 135px 75px 135px;
 }
 
-.catalog-title{
-    font-size: 24px;
-    line-height: 33px;
-    letter-spacing: -0.015em;
-}
-
 .catalog-movies{
     margin-top: 30px;
     display: grid;
@@ -32,15 +26,10 @@
         align-items: flex-start;
     }
 
-    .catalog-title{
-        margin-bottom: 20px;
-    }
-
     .catalog-movies{
         grid-template-columns: repeat(auto-fill, 200px);
         grid-gap: 33px 10px;
     }
-    
 }
 
 //mobile breakpoints
@@ -48,5 +37,4 @@
     .catalog-movies{
         grid-template-columns: repeat(auto-fill, 100%);
     }
-
 }

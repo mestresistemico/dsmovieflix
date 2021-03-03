@@ -16,7 +16,7 @@ const MovieCardLoader = () => {
                         backgroundColor="#ecebeb"
                         foregroundColor="#d6d2d2"
                     >
-                        <rect x="2" y="0" rx="10" ry="10" width="270" height="320" />
+                        <rect x="2" y="0" rx="10" ry="10" width="245" height="320" />
                     </ContentLoader>
         
         ))}

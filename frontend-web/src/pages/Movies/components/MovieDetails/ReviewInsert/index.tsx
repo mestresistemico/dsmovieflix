@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import history from 'core/utils/history';
 import { makePrivateRequest } from 'core/utils/request';
 import { useForm } from 'react-hook-form';
