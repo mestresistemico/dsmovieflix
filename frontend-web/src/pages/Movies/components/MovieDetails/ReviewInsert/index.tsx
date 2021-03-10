@@ -36,7 +36,8 @@ const ReviewInsert = ({
             })
                 .then(() => {
                     toast.info('Avaliação salva com sucesso!');
-                    history.push(`/movies/${movieId}`);
+//                    history.push(`/movies/${movieId}`);
+                    history.go(0);
                 })
                 .catch(() => {
                     toast.error('Erro ao salvar avaliação!');
