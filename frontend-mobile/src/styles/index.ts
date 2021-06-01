@@ -1,10 +1,12 @@
 import { StyleSheet, Dimensions } from 'react-native'
+import { color } from 'react-native-reanimated';
 
 const deviceWidth = Dimensions.get('window').width;
 const deviceHeight = Dimensions.get('window').height;
 
 const colors = {
     white: "#fff",
+    lightestGray: "#fefefe",
     lightGray: "#f2f2f2",
     borderGray: "#e1e1e1",
     mediumGray: "#525252",
@@ -28,6 +30,7 @@ const text = StyleSheet.create({
     },
 
     regular: {
+        width: 240,
         fontSize: 16,
         fontWeight: "400",
         textAlign: "center",
@@ -88,9 +91,9 @@ const text = StyleSheet.create({
 
     loginTitle: {
         fontSize: 30,
-        color: colors.darkGray,
+        color: colors.white,
         textTransform: "uppercase",
-        marginBottom: 50,
+        marginBottom: 70,
     },
 
     logoutText: {
@@ -164,6 +167,7 @@ const theme = StyleSheet.create({
     draw: {
         width: 313,
         height: 225,
+        marginBottom: 40,
     },
 
     textContainer: {
@@ -172,7 +176,7 @@ const theme = StyleSheet.create({
 
     primaryButton: {
         backgroundColor: colors.primary,
-        width: 290,
+        width: 335,
         height: 50,
         flexDirection: "row",
         justifyContent: "space-between",
@@ -329,12 +333,13 @@ const theme = StyleSheet.create({
     },
 
     textInput: {
-        width: 290,
+        width: 335,
         height: 50,
         borderWidth: 1,
-        borderColor: colors.mediumGray,
+        borderColor: colors.borderGray,
         borderRadius: 10,
         padding: 10,
+        backgroundColor: colors.lightestGray
     },
 
     toggle: {

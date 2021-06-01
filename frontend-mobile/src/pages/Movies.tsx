@@ -12,29 +12,31 @@ const Movies: React.FC = () => {
 
     async function fillProducts() {
         setLoading(true);
-//        const res = await getProducts();
-//        setProducts(res.data.content);
+        //        const res = await getProducts();
+        //        setProducts(res.data.content);
         setLoading(false);
     };
 
     useEffect(() => {
         fillProducts();
-    },[]);
+    }, []);
 
-//  const data = search.length > 0 ?
-//        products.filter(product => product.name.toLowerCase().includes(search.toLowerCase())) : 
-//        products;
+    //  const data = search.length > 0 ?
+    //        products.filter(product => product.name.toLowerCase().includes(search.toLowerCase())) : 
+    //        products;
 
-//<SearchInput placeholder={"Nome do produto"} search={search} setSearch={setSearch}/>
-//{loading ? (<ActivityIndicator size="large" />) :
-//(data.map((product) => (
-//    <MovieCard {...product} key={product.id}/>
-//)))}
+    //<SearchInput placeholder={"Nome do produto"} search={search} setSearch={setSearch}/>
+    //{loading ? (<ActivityIndicator size="large" />) :
+    //(data.map((product) => (
+    //    <MovieCard {...product} key={product.id}/>
+    //)))}
 
-return(
-        <ScrollView contentContainerStyle={theme.scrollContainer}>
-            <Text>Lista de filmes</Text>
-        </ScrollView>
+    return (
+        <View style={theme.container}>
+            <ScrollView contentContainerStyle={theme.scrollContainer}>
+                <Text>Lista de filmes</Text>
+            </ScrollView>
+        </View>
     )
 
 }

@@ -1,18 +1,15 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { theme, text } from '../styles';
-//import arrow from 'src/core/assets/images/arrow.svg';
-//import draw from 'src/core/assets/images/draw.png';
-//import menu from '../assets/menu.svg';
+import seta from '../core/assets/Seta.png';
+import desenho from '../core/assets/Desenho.png';
 import { useNavigation } from '@react-navigation/core';
-
-//<Image source={draw} style={theme.draw} />
-//<Image source={arrow} />
 
 const Home: React.FC = () => {
     const navigation = useNavigation();
     return (
         <View style={theme.container}>
+            <Image source={desenho} style={theme.draw} />
             <View style={theme.textContainer}>
                 <Text style={text.bold}>
                     Avalie filmes
@@ -24,13 +21,13 @@ const Home: React.FC = () => {
             <TouchableOpacity
                 style={theme.primaryButton}
                 activeOpacity={0.8}
-                onPress={() => navigation.navigate("Movies")}
+                onPress={() => navigation.navigate("Login")}
             >
                 <Text style={text.primaryText}>
                     Fazer login
                 </Text>
                 <View style={theme.arrowContainer}>
-
+                    <Image source={seta} />
                 </View>
             </TouchableOpacity>
         </View>
