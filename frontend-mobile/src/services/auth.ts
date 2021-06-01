@@ -9,20 +9,15 @@ interface AuthProps {
 
 export async function login(userInfo: AuthProps) {
     const data = queryString.stringify({ ...userInfo, grant_type: "password" });
-    const result = await api.post('oauth/token', data, {
+    return await api.post('oauth/token', data, {
         headers: {
             Authorization: TOKEN,
             "Content-type": "application/x-www-form-urlencoded"
         }
     });
-
-    const { access_token } = result.data;
-    setAsyncKeys("@token", access_token);
-
-    return result;
 }
 
-async function setAsyncKeys(key: string, value: string) {
+export async function setAsyncKeys(key: string, value: string) {
     try {
         await AsyncStorage.setItem(key, value);
     } catch (e) {
