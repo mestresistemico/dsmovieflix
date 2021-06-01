@@ -13,8 +13,14 @@ export async function userToken() {
     return token;
 }
 
-export function getMovies() {
-    const res = api.get(`/movies?page=0&linesPerPage=20&orderBy=title&direction=ASC&genreId=0`);
+export async function getMovies() {
+    const authToken = await userToken();
+    const res = api.get(`/movies?page=0&linesPerPage=20&orderBy=title&direction=ASC&genreId=0`,
+        {
+            headers: {
+                Authorization: `Bearer ${authToken}`,
+            },
+        });
     return res;
 }
 
@@ -28,8 +34,14 @@ export async function createReview(data: object) {
     return res;
 }
 
-export function getGenres() {
-    const res = api.get(`/genres`);
+export async function getGenres() {
+    const authToken = await userToken();
+    const res = api.get(`/genres`,
+        {
+            headers: {
+                Authorization: `Bearer ${authToken}`,
+            },
+        });
     return res;
 }
 

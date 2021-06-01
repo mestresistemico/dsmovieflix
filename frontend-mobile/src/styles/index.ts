@@ -9,6 +9,8 @@ const colors = {
     lightestGray: "#fefefe",
     lightGray: "#f2f2f2",
     borderGray: "#e1e1e1",
+    lighterGray: "#cdcdcd",
+    lightMediumGray: "#6c6c6c",
     mediumGray: "#525252",
     darkGray: "#263238",
     black: "#000",
@@ -51,21 +53,22 @@ const text = StyleSheet.create({
         marginLeft: 75,
     },
 
-    productName: {
-        fontSize: 16,
+    movieTitle: {
+        fontSize: 18,
         fontWeight: "bold",
+        color: colors.white,
     },
 
-    currency: {
-        fontSize: 16,
-        fontWeight: "400",
-        color: colors.mediumGray,
-    },
-
-    productPrice: {
-        fontSize: 30,
+    movieYear: {
+        fontSize: 14,
         fontWeight: "bold",
         color: colors.primary,
+    },
+
+    movieSubtitle: {
+        fontSize: 16,
+        marginTop: 5,
+        color: colors.lighterGray,
     },
 
     gobackText: {
@@ -112,10 +115,11 @@ const text = StyleSheet.create({
         color: colors.red,
     },
 
-    editTxt: {
+    detailsBtnTxt: {
         textTransform: "uppercase",
+        fontSize: 14,
         fontWeight: "bold",
-        color: colors.mediumGray,
+        color: colors.white,
     },
 
     saveTxt: {
@@ -198,9 +202,10 @@ const theme = StyleSheet.create({
         padding: 10,
     },
 
-    productCard: {
+    movieCard: {
+        height: 400,
         width: "100%",
-        backgroundColor: colors.white,
+        backgroundColor: colors.lightMediumGray,
         borderRadius: 10,
         shadowColor: colors.black,
         shadowOffset: {
@@ -209,23 +214,21 @@ const theme = StyleSheet.create({
         },
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
-        marginVertical: 10,
+        marginVertical: 20,
         alignItems: "center",
         justifyContent: "space-around",
     },
 
-    productImg: {
-        width: 140,
-        height: 140,
+    movieImg: {
+        width: "100%",
+        height: 225,
         margin: 16,
+        marginTop: 20,
     },
 
-    productDescription: {
+    movieDescription: {
         width: "100%",
         padding: 20,
-        borderTopColor: colors.lightGray,
-        borderTopWidth: 1,
-
     },
 
     priceContainer: {
@@ -368,12 +371,13 @@ const theme = StyleSheet.create({
         borderRadius: 10,
     },
 
-    editBtn: {
-        width: "48%",
+    detailsBtn: {
+        width: "90%",
         height: 40,
         borderWidth: 1,
-        borderColor: colors.mediumGray,
-        marginVertical: 10,
+        borderColor: colors.white,
+        marginTop: 10,
+        marginBottom: 20,
         alignItems: "center",
         justifyContent: "center",
         borderRadius: 10,
