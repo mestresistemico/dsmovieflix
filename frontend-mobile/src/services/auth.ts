@@ -1,7 +1,6 @@
 import { api, TOKEN } from './index';
 import queryString from 'query-string';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { acc } from 'react-native-reanimated';
 
 interface AuthProps {
     username: string;

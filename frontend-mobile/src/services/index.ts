@@ -6,7 +6,7 @@ export const api = axios.create({
 
 })
 
-export const TOKEN = 'Basic ZHNjYXRhbG9nOmRzY2F0YWxvZzEyMw=='
+export const TOKEN = 'Basic ZHNtb3ZpZWZsaXg6ZHNtb3ZpZWZsaXgxMjM='
 
 export async function userToken() {
     const token = AsyncStorage.getItem("@token");
@@ -33,19 +33,9 @@ export function getGenres() {
     return res;
 }
 
-export async function geMovie(id: number) {
+export async function getMovie(id: number) {
     const authToken = await userToken();
     const res = api.get(`/products/${id}`, {
-        headers: {
-            Authorization: `Bearer ${authToken}`,
-        },
-    });
-    return res;
-}
-
-export async function updateProduct(data: object) {
-    const authToken = await userToken();
-    const res = api.put(`/movies/${data.id}`, data, {
         headers: {
             Authorization: `Bearer ${authToken}`,
         },
