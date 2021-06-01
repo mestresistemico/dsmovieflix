@@ -7,29 +7,34 @@ const colors = {
     white: "#fff",
     lightGray: "#f2f2f2",
     borderGray: "#e1e1e1",
-    mediumGray: "#9e9e9e",
+    mediumGray: "#525252",
     darkGray: "#263238",
     black: "#000",
-    primary: "#407bee",
-    secondary: "#33569b",
+    primary: "#FFC700",
+    secondary: "rgba(38, 50, 56, 0.5)",
     bluePill: "#407bff61",
     red: "#df5753",
 };
 
 const text = StyleSheet.create({
-    bold:{
-        fontSize: 32, 
+    bold: {
+        fontSize: 26,
         fontWeight: "bold",
         textAlign: "center",
-        marginBottom: 15,
-        color: colors.darkGray,
+        marginBottom: 50,
+        color: colors.white,
+        lineHeight: 35,
+        letterSpacing: -0.015,
     },
 
-    regular:{
-        fontSize: 20, 
+    regular: {
+        fontSize: 16,
         fontWeight: "400",
         textAlign: "center",
-        color: colors.mediumGray,
+        marginBottom: 50,
+        color: colors.white,
+        lineHeight: 22,
+        letterSpacing: -0.015,
     },
 
     primaryText: {
@@ -37,14 +42,15 @@ const text = StyleSheet.create({
         fontWeight: "bold",
         lineHeight: 22,
         textAlign: "center",
-        color: "#FFFFFF",
+        color: colors.black,
         textTransform: "uppercase",
-        marginLeft: 20,
+        letterSpacing: -0.015,
+        marginLeft: 75,
     },
 
     productName: {
         fontSize: 16,
-        fontWeight: "bold",       
+        fontWeight: "bold",
     },
 
     currency: {
@@ -52,7 +58,7 @@ const text = StyleSheet.create({
         fontWeight: "400",
         color: colors.mediumGray,
     },
-    
+
     productPrice: {
         fontSize: 30,
         fontWeight: "bold",
@@ -136,6 +142,7 @@ const theme = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         padding: 20,
+        backgroundColor: colors.mediumGray,
     },
 
     card: {
@@ -146,7 +153,7 @@ const theme = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-around",
         shadowColor: colors.black,
-        shadowOffset:{
+        shadowOffset: {
             width: 0,
             height: 2,
         },
@@ -161,9 +168,8 @@ const theme = StyleSheet.create({
 
     textContainer: {
         paddingHorizontal: 20,
-
     },
-    
+
     primaryButton: {
         backgroundColor: colors.primary,
         width: 290,
@@ -193,7 +199,7 @@ const theme = StyleSheet.create({
         backgroundColor: colors.white,
         borderRadius: 10,
         shadowColor: colors.black,
-        shadowOffset:{
+        shadowOffset: {
             width: 0,
             height: 2,
         },
@@ -212,7 +218,7 @@ const theme = StyleSheet.create({
 
     productDescription: {
         width: "100%",
-        padding: 20, 
+        padding: 20,
         borderTopColor: colors.lightGray,
         borderTopWidth: 1,
 
@@ -222,14 +228,14 @@ const theme = StyleSheet.create({
         flexDirection: "row",
         marginTop: 10,
     },
-    
+
     inputContainer: {
         width: "100%",
         height: 60,
         backgroundColor: colors.white,
         borderRadius: 10,
         shadowColor: colors.black,
-        shadowOffset:{
+        shadowOffset: {
             width: 0,
             height: 2,
         },
@@ -243,7 +249,7 @@ const theme = StyleSheet.create({
         width: "90%",
         height: 40,
         borderBottomWidth: 1,
-        borderBottomColor: colors.borderGray, 
+        borderBottomColor: colors.borderGray,
     },
 
     detailsContainer: {
@@ -266,7 +272,7 @@ const theme = StyleSheet.create({
         borderRadius: 20,
         justifyContent: "space-around",
         shadowColor: colors.black,
-        shadowOffset:{
+        shadowOffset: {
             width: 0,
             height: 2,
         },
@@ -304,7 +310,7 @@ const theme = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         shadowColor: colors.black,
-        shadowOffset:{
+        shadowOffset: {
             width: 0,
             height: 2,
         },
@@ -336,8 +342,8 @@ const theme = StyleSheet.create({
 
     },
 
-    buttonTextContainer:{
-        
+    buttonTextContainer: {
+
     },
 
     buttonContainer: {
@@ -382,7 +388,7 @@ const theme = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-around",
         shadowColor: colors.black,
-        shadowOffset:{
+        shadowOffset: {
             width: 0,
             height: 2,
         },
@@ -407,7 +413,7 @@ const theme = StyleSheet.create({
         borderRadius: 20,
         padding: 20,
         shadowColor: colors.black,
-        shadowOffset:{
+        shadowOffset: {
             width: 0,
             height: 2,
         },
@@ -467,7 +473,7 @@ const theme = StyleSheet.create({
 
     cancelBtn: {
         marginLeft: -20,
-        width: deviceWidth/3,
+        width: deviceWidth / 3,
         height: 40,
         borderWidth: 1,
         borderColor: colors.red,
@@ -478,7 +484,7 @@ const theme = StyleSheet.create({
     },
 
     saveBtn: {
-        width: deviceWidth/3,
+        width: deviceWidth / 3,
         height: 40,
         backgroundColor: colors.primary,
         marginVertical: 10,
@@ -490,8 +496,8 @@ const theme = StyleSheet.create({
 });
 
 const nav = StyleSheet.create({
-    leftText:{
-        color: colors.white,
+    leftText: {
+        color: colors.black,
         fontWeight: "bold",
         marginLeft: 10,
     },
@@ -563,7 +569,7 @@ const tabbar = StyleSheet.create({
     },
 
     pillTextActive: {
-        
+
     },
 })
 
@@ -574,7 +580,7 @@ const admin = StyleSheet.create({
     },
 
     addButton: {
-        width: deviceWidth-20,
+        width: deviceWidth - 20,
         height: 50,
         backgroundColor: colors.primary,
         margin: 10,
@@ -584,4 +590,4 @@ const admin = StyleSheet.create({
     },
 })
 
-export {colors, theme, text, nav, tabbar, admin};
+export { colors, theme, text, nav, tabbar, admin };
