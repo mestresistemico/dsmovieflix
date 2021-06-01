@@ -97,7 +97,7 @@ const text = StyleSheet.create({
     },
 
     logoutText: {
-        color: colors.white,
+        color: colors.black,
     },
 
     addButtonText: {
@@ -537,10 +537,10 @@ const nav = StyleSheet.create({
     },
 
     logoutBtn: {
-        width: 60,
-        height: 30,
+        width: 75,
+        height: 25,
         borderWidth: 1,
-        borderColor: colors.white,
+        borderColor: colors.black,
         borderRadius: 10,
         alignItems: "center",
         justifyContent: "center",
