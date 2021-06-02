@@ -10,6 +10,7 @@ const colors = {
     lightGray: "#f2f2f2",
     borderGray: "#e1e1e1",
     lighterGray: "#cdcdcd",
+    lighterMediumGray: "#9e9e9e",
     lightMediumGray: "#6c6c6c",
     mediumGray: "#525252",
     darkGray: "#263238",
@@ -59,8 +60,23 @@ const text = StyleSheet.create({
         color: colors.white,
     },
 
+    movieTitleDetails: {
+        fontSize: 24,
+        fontWeight: "bold",
+        color: colors.white,
+        paddingLeft: 25,
+        paddingRight: 15,
+        paddingVertical: 15,
+    },
+
     movieYear: {
         fontSize: 14,
+        fontWeight: "bold",
+        color: colors.primary,
+    },
+
+    movieYearDetails: {
+        fontSize: 24,
         fontWeight: "bold",
         color: colors.primary,
     },
@@ -71,12 +87,24 @@ const text = StyleSheet.create({
         color: colors.lighterGray,
     },
 
+    movieSubtitleDetails: {
+        fontSize: 18,
+        color: colors.lighterMediumGray,
+    },
+
     gobackText: {
         fontSize: 18,
         fontWeight: "bold",
         textTransform: "uppercase",
         color: colors.darkGray,
         marginLeft: 16,
+    },
+
+    movieSynopsisText: {
+        fontSize: 22,
+        fontWeight: "bold",
+        color: colors.white,
+        paddingTop: 15,
     },
 
     productDetailsText: {
@@ -86,10 +114,10 @@ const text = StyleSheet.create({
         color: colors.darkGray,
     },
 
-    productDescription: {
+    movieSynopsis: {
         fontSize: 16,
         fontWeight: "400",
-        color: colors.mediumGray,
+        color: colors.lighterMediumGray,
     },
 
     loginTitle: {
@@ -204,7 +232,7 @@ const theme = StyleSheet.create({
     },
 
     movieCard: {
-        height: 400,
+        height: 450,
         width: "100%",
         backgroundColor: colors.lightMediumGray,
         borderRadius: 10,
@@ -227,9 +255,16 @@ const theme = StyleSheet.create({
         marginTop: 20,
     },
 
+    movieImgDetails: {
+        width: "100%",
+        height: 225,
+    },
+
     movieDescription: {
         width: "100%",
-        padding: 20,
+        paddingLeft: 25,
+        paddingTop: 15,
+        paddingRight: 20,
     },
 
     priceContainer: {
@@ -288,9 +323,8 @@ const theme = StyleSheet.create({
     detailCard: {
         width: "100%",
         height: "100%",
-        backgroundColor: colors.white,
-        borderRadius: 20,
-        justifyContent: "space-around",
+        backgroundColor: colors.lightMediumGray,
+        borderRadius: 10,
         shadowColor: colors.black,
         shadowOffset: {
             width: 0,
@@ -298,7 +332,6 @@ const theme = StyleSheet.create({
         },
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
-        padding: 20,
     },
 
     productImageContainer: {
@@ -319,7 +352,7 @@ const theme = StyleSheet.create({
         padding: 20,
         borderWidth: 0.5,
         borderRadius: 10,
-        borderColor: colors.lightGray,
+        borderColor: colors.borderGray,
     },
 
     loginCard: {
