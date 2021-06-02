@@ -24,6 +24,10 @@ const Login: React.FC = () => {
                 const { access_token } = result.data;
                 setAsyncKeys("@token", access_token);
                 setUserFetchData(result);
+                setUserInfo({
+                    username: "",
+                    password: "",
+                });
                 navigation.navigate("Movies");
             }).catch(err => {
                 Toast.show("Login inválido. Revise suas credenciais ou informe ao administrador o erro: " + err);

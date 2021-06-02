@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, ActivityIndicator } from 'react-native';
-import { MovieCard } from '../components';
+import { MovieCard, SearchInput } from '../components';
 //import  { MovieCard, SearchInput } from '../components';
 import { ScrollView } from 'react-native-gesture-handler';
 import { theme } from '../styles';
 import { api, getMovies } from '../services';
 
+type Genre = {
+    id: number;
+    name: string;
+    label: string;
+    value: number;
+}
+
 const Movies: React.FC = () => {
-    const [search, setSearch] = useState("");
     const [movies, setMovies] = useState([]);
+    const [genre, setGenre] = useState<Genre>();
     const [loading, setLoading] = useState(false);
 
     async function fillProducts() {
@@ -22,16 +29,19 @@ const Movies: React.FC = () => {
         fillProducts();
     }, []);
 
-      const data = movies;
-    //  const data = search.length > 0 ?
-    //        products.filter(product => product.name.toLowerCase().includes(search.toLowerCase())) : 
-    //        products;
+    const handleChangeGenre = (genreRes: Genre) => {
+        setGenre(genreRes);
+    }
 
-    //<SearchInput placeholder={"Nome do produto"} search={search} setSearch={setSearch}/>
-
+    const data = genre ?
+        movies.filter(movie => movie.genreId === genre) :
+        movies;
     return (
         <View style={theme.container}>
             <ScrollView contentContainerStyle={theme.scrollContainer}>
+                <SearchInput
+                    genre={genre}
+                    handleChangeGenre={handleChangeGenre} />
                 {loading ? (<ActivityIndicator size="large" />) :
                     (data.map((movie) => (
                         <MovieCard {...movie} key={movie.id} />

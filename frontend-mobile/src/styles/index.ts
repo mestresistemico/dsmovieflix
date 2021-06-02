@@ -101,6 +101,7 @@ const text = StyleSheet.create({
 
     logoutText: {
         color: colors.black,
+        textTransform: "uppercase",
     },
 
     addButtonText: {
@@ -238,8 +239,8 @@ const theme = StyleSheet.create({
 
     inputContainer: {
         width: "100%",
-        height: 60,
-        backgroundColor: colors.white,
+        height: 80,
+        backgroundColor: colors.lightMediumGray,
         borderRadius: 10,
         shadowColor: colors.black,
         shadowOffset: {
@@ -249,7 +250,19 @@ const theme = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
         marginVertical: 12.5,
-        paddingVertical: 10
+        paddingVertical: 10,
+        alignItems: "center",
+        justifyContent: "center",
+    },
+
+    selectContainer: {
+        width: "90%",
+        height: "90%",
+        borderColor: colors.white,
+        borderWidth: 1,
+        borderRadius: 10,
+        alignItems: "center",
+        justifyContent: "center",
     },
 
     searchInput: {
@@ -599,4 +612,29 @@ const admin = StyleSheet.create({
     },
 })
 
-export { colors, theme, text, nav, tabbar, admin };
+const pickerSelectStyles = StyleSheet.create({
+    inputIOS: {
+        height: 80,
+        marginTop: 15,
+        fontSize: 16,
+        borderWidth: 1,
+        borderColor: colors.white,
+        borderRadius: 10,
+        color: colors.white,
+        paddingRight: 30, // to ensure the text is never behind the icon
+    },
+    inputAndroid: {
+        height: 80,
+        width: "90%",
+        marginHorizontal: 15,
+        fontSize: 16,
+        borderWidth: 1,
+        borderColor: colors.white,
+        borderRadius: 10,
+        color: colors.black,
+        paddingRight: 30, // to ensure the text is never behind the icon
+    },
+});
+
+
+export { colors, theme, text, nav, tabbar, admin, pickerSelectStyles };
