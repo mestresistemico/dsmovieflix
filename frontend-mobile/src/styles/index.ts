@@ -43,6 +43,15 @@ const text = StyleSheet.create({
         letterSpacing: -0.015,
     },
 
+    username: {
+        marginLeft: 15,
+        fontSize: 16,
+        fontWeight: "bold",
+        color: colors.white,
+        lineHeight: 22,
+        letterSpacing: -0.015,
+    },
+
     primaryText: {
         fontSize: 16,
         fontWeight: "bold",
@@ -115,6 +124,13 @@ const text = StyleSheet.create({
     },
 
     movieSynopsis: {
+        marginBottom: 30,
+        fontSize: 16,
+        fontWeight: "400",
+        color: colors.lighterMediumGray,
+    },
+
+    reviewText: {
         fontSize: 16,
         fontWeight: "400",
         color: colors.lighterMediumGray,
@@ -169,6 +185,13 @@ const text = StyleSheet.create({
         fontWeight: "300",
         marginVertical: 5,
         padding: 2,
+    },
+
+    movieAvalicoesText: {
+        fontSize: 22,
+        fontWeight: "bold",
+        color: colors.white,
+        paddingBottom: 15,
     },
 });
 
@@ -322,7 +345,21 @@ const theme = StyleSheet.create({
 
     detailCard: {
         width: "100%",
-        height: "100%",
+        height: 755,
+        marginBottom: 20,
+        backgroundColor: colors.lightMediumGray,
+        borderRadius: 10,
+        shadowColor: colors.black,
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+    },
+
+    reviewCard: {
+        width: "100%",
         backgroundColor: colors.lightMediumGray,
         borderRadius: 10,
         shadowColor: colors.black,
@@ -348,6 +385,15 @@ const theme = StyleSheet.create({
     },
 
     scrollTextContainer: {
+        height: 275,
+        marginVertical: 20,
+        padding: 20,
+        borderWidth: 0.5,
+        borderRadius: 10,
+        borderColor: colors.borderGray,
+    },
+
+    scrollReviewContainer: {
         marginVertical: 20,
         padding: 20,
         borderWidth: 0.5,
@@ -548,6 +594,18 @@ const theme = StyleSheet.create({
         borderRadius: 10,
     },
 
+    reviewContainer: {
+        marginHorizontal: 20,
+    },
+
+    reviewStarName: {
+        marginHorizontal: 20,
+        flexDirection: "row",
+        alignItems: "center",
+    },
+
+    reviewStar: {
+    },
 });
 
 const nav = StyleSheet.create({

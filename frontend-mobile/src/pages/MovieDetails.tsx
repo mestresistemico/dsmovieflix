@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, ActivityIndicator, Image } from 'react-native';
 import { text, theme } from '../styles';
-import { api, getMovie } from '../services';
-import arrowBack from '../assets/arrowBack.png';
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import { getMovie } from '../services';
+import { ScrollView } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/core';
+import ReviewCard from './ReviewCard';
 
 const MovieDetails = ({ route: { params: { id } } }) => {
 
@@ -33,6 +33,9 @@ const MovieDetails = ({ route: { params: { id } } }) => {
         loadMovieData();
     }, []);
 
+    /*
+    */
+
     return (
         <View style={theme.container}>
             {loading ? (<ActivityIndicator size="large" />) :
@@ -53,7 +56,7 @@ const MovieDetails = ({ route: { params: { id } } }) => {
                                 </Text>
                                 <Text style={text.movieSynopsisText}>
                                     Sinopse
-                            </Text>
+                                </Text>
                                 <ScrollView style={theme.scrollTextContainer}>
                                     <Text style={text.movieSynopsis}>
                                         {movie.synopsis}
@@ -61,6 +64,17 @@ const MovieDetails = ({ route: { params: { id } } }) => {
                                 </ScrollView>
                             </View>
                         </View>
+                        {movie.reviews.length > 0 ?
+                            <View style={theme.reviewCard}>
+                                <View style={theme.movieDescription}>
+                                    <Text style={text.movieAvalicoesText}>
+                                        Avaliações
+                                </Text>
+                                </View>
+                                {movie.reviews?.map((review) => (
+                                    <ReviewCard reviewText={review.text} reviewUsername={review.userName} />))}
+                            </View> : null
+                        }
                     </ScrollView>
                 )
             }
