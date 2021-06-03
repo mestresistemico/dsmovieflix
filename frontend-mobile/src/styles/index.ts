@@ -204,6 +204,14 @@ const theme = StyleSheet.create({
         backgroundColor: colors.mediumGray,
     },
 
+    reviewButtonContainer: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        paddingHorizontal: 20,
+        paddingBottom: 20,
+    },
+
     card: {
         width: "100%",
         height: "100%",
@@ -369,6 +377,7 @@ const theme = StyleSheet.create({
         },
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
+        marginBottom: 20,
     },
 
     productImageContainer: {
@@ -550,6 +559,20 @@ const theme = StyleSheet.create({
         borderRadius: 10,
         padding: 10,
         marginVertical: 15,
+    },
+
+    textAreaReview: {
+        marginVertical: 15,
+        marginHorizontal: 20,
+        height: 100,
+        textAlignVertical: "top",
+        paddingVertical: 15,
+        paddingHorizontal: 10,
+        borderWidth: 0.5,
+        borderRadius: 10,
+        borderColor: colors.borderGray,
+        backgroundColor: colors.white,
+        color: colors.lighterMediumGray,
     },
 
     selectInput: {

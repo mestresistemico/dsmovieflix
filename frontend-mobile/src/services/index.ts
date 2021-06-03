@@ -24,8 +24,9 @@ export async function getMovies() {
     return res;
 }
 
-export async function createReview(data: object) {
+export async function insertReview(movieId : number, text: string) {
     const authToken = await userToken();
+    const data = { movieId, text };
     const res = api.post(`/reviews`, data, {
         headers: {
             Authorization: `Bearer ${authToken}`,

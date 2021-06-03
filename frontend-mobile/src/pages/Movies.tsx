@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, ActivityIndicator } from 'react-native';
 import { MovieCard, SearchInput } from '../components';
-//import  { MovieCard, SearchInput } from '../components';
 import { ScrollView } from 'react-native-gesture-handler';
 import { theme } from '../styles';
 import { api, getMovies } from '../services';

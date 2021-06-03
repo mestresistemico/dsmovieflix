@@ -9,11 +9,9 @@ interface MovieProps {
     title: string;
     subTitle: string;
     year: string;
-    role?: string;
 }
 
-
-const MovieCard: React.FC<MovieProps> = ({ id, imgUrl, title, subTitle, year, role }) => {
+const MovieCard: React.FC<MovieProps> = ({ id, imgUrl, title, subTitle, year }) => {
     const navigation = useNavigation();
     return (
         <View style={theme.movieCard}>
@@ -29,7 +27,7 @@ const MovieCard: React.FC<MovieProps> = ({ id, imgUrl, title, subTitle, year, ro
                     {subTitle}
                 </Text>
             </View>
-            <TouchableOpacity style={theme.detailsBtn} onPress={() =>
+            <TouchableOpacity style={theme.detailsBtn} onPress={() => 
                 navigation.navigate("MovieDetails", { id })}>
                 <Text style={text.detailsBtnTxt}>Ver detalhes</Text>
             </TouchableOpacity>
