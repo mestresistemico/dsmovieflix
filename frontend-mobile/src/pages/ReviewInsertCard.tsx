@@ -1,36 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { View, Text } from 'react-native';
 import { TextInput, TouchableOpacity } from 'react-native-gesture-handler';
-import { insertReview } from '../services';
 import { theme, text } from '../styles';
-import Toast from 'react-native-tiny-toast';
 import { useNavigation } from '@react-navigation/core';
 
 interface ReviewInsertProps {
-    movieId: number;
+    textReview: string;
+    setTextReview: Function;
+    handleInsertReview: Function;
 }
 
-const ReviewInsertCard: React.FC<ReviewInsertProps> = ({ movieId }) => {
+const ReviewInsertCard: React.FC<ReviewInsertProps> = ({ 
+    textReview, setTextReview, handleInsertReview }) => {
     const navigation = useNavigation();
-    const [textReview, setTextReview] = useState("");
-
-    const notBlankText = (text: string) => {
-        return text.replace(/\s/g, '') !== '';
-    }
-
-    async function handleInsertReview() {
-        if (notBlankText(textReview)) {
-            await insertReview(movieId, textReview)
-                .then(result => {
-                    setTextReview("");
-                    Toast.showSuccess("Avaliação inserida com sucesso");
-                }).catch(err => {
-                    Toast.show("Erro ao inserir avaliação. Revise use texto ou informe ao administrador o erro: " + err);
-                });
-        } else {
-            Toast.show("A avaliação não pode estar em branco.");
-        }
-    }
 
     return (
         <View style={theme.reviewCard}>
