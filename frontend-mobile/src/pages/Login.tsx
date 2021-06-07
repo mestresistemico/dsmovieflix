@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Image, TextInput } from 'react-native';
 import { theme, text } from '../styles';
 import eyesOpened from '../core/assets/eyes-opened.png';
 import eyesClosed from '../core/assets/eyes-closed.png';
 import arrow from '../core/assets/Seta.png';
-import { isAuthenticated, login, setAsyncKeys } from '../services/auth';
+import { login, setAsyncKeys } from '../services/auth';
 import { useNavigation } from '@react-navigation/core';
 import Toast from 'react-native-tiny-toast';
 
@@ -19,6 +19,7 @@ const Login: React.FC = () => {
     });
 
     async function handleLogin() {
+        const toast = Toast.showLoading("Logando...");
         await login(userInfo)
             .then(result => {
                 const { access_token } = result.data;
@@ -28,8 +29,10 @@ const Login: React.FC = () => {
                     username: "",
                     password: "",
                 });
+                Toast.hide(toast);
                 navigation.navigate("Movies");
             }).catch(err => {
+                Toast.hide(toast);
                 Toast.show("Login inválido. Revise suas credenciais ou informe ao administrador o erro: " + err);
             });
     }

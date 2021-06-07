@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, ActivityIndicator } from 'react-native';
+import { View, ActivityIndicator } from 'react-native';
 import { MovieCard, SearchInput } from '../components';
 import { ScrollView } from 'react-native-gesture-handler';
 import { theme } from '../styles';
-import { api, getMovies } from '../services';
+import { getMovies } from '../services';
+import Toast from 'react-native-tiny-toast';
 
 type Genre = {
     id: number;
@@ -18,10 +19,12 @@ const Movies: React.FC = () => {
     const [loading, setLoading] = useState(false);
 
     async function fillProducts() {
+        const toast = Toast.showLoading("Carregando...");
         setLoading(true);
         const res = await getMovies();
         setMovies(res.data.content);
         setLoading(false);
+        Toast.hide(toast);
     };
 
     useEffect(() => {
@@ -38,9 +41,10 @@ const Movies: React.FC = () => {
     return (
         <View style={theme.container}>
             <ScrollView contentContainerStyle={theme.scrollContainer}>
+                {!loading &&
                 <SearchInput
                     genre={genre}
-                    handleChangeGenre={handleChangeGenre} />
+                    handleChangeGenre={handleChangeGenre} />}
                 {loading ? (<ActivityIndicator size="large" />) :
                     (data.map((movie) => (
                         <MovieCard {...movie} key={movie.id} />

@@ -7,8 +7,7 @@ interface ReviewProps {
     reviewText: string;
     reviewUsername: string;
 }
-/*
-*/
+
 const ReviewCard: React.FC<ReviewProps> = ({ reviewText, reviewUsername }) => {
     return (
         <View style={theme.reviewContainer}>

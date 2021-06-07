@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, TextInput, ActivityIndicator } from 'react-native';
+import { View } from 'react-native';
 import { getGenres } from '../services';
 import { theme, pickerSelectStyles, colors } from '../styles';
 import RNPickerSelect from 'react-native-picker-select';
@@ -26,6 +26,7 @@ const SearchInput: React.FC<SearchProps> = ({
         value: null,
         color: colors.mediumGray,
     };
+
 
     const mapSelectGenres = (genres: Genre[]) => {
         return genres.map(genre => ({
@@ -58,7 +59,7 @@ const SearchInput: React.FC<SearchProps> = ({
                         handleChangeGenre(e);
                     }}
                     style={pickerSelectStyles}
-                />
+                    />
             </View>
         </View>
     )

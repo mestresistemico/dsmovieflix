@@ -26,11 +26,13 @@ const MovieDetails = ({ route: { params: { id } } }) => {
     const [textReview, setTextReview] = useState("");
 
     async function loadMovieData() {
+        const toast = Toast.showLoading("Carregando...");
         setLoading(true);
         const res = await getMovie(id);
         setMovie(res.data);
         setLoading(false);
         setAllowed(await isAllowedByRole(['ROLE_MEMBER']));
+        Toast.hide(toast);
     };
 
     useEffect(() => {
@@ -55,9 +57,6 @@ const MovieDetails = ({ route: { params: { id } } }) => {
             Toast.show("A avaliação não pode estar em branco.");
         }
     }
-
-    /*
-    */
 
     return (
         <View style={theme.container}>

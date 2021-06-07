@@ -1,5 +1,4 @@
 import { StyleSheet, Dimensions } from 'react-native'
-import { color } from 'react-native-reanimated';
 
 const deviceWidth = Dimensions.get('window').width;
 const deviceHeight = Dimensions.get('window').height;
@@ -101,26 +100,11 @@ const text = StyleSheet.create({
         color: colors.lighterMediumGray,
     },
 
-    gobackText: {
-        fontSize: 18,
-        fontWeight: "bold",
-        textTransform: "uppercase",
-        color: colors.darkGray,
-        marginLeft: 16,
-    },
-
     movieSynopsisText: {
         fontSize: 22,
         fontWeight: "bold",
         color: colors.white,
         paddingTop: 15,
-    },
-
-    productDetailsText: {
-        fontSize: 30,
-        fontWeight: "bold",
-        marginTop: 10,
-        color: colors.darkGray,
     },
 
     movieSynopsis: {
@@ -148,43 +132,11 @@ const text = StyleSheet.create({
         textTransform: "uppercase",
     },
 
-    addButtonText: {
-        color: colors.white,
-        textTransform: "uppercase",
-        fontWeight: "bold",
-    },
-
-    deleteTxt: {
-        textTransform: "uppercase",
-        fontWeight: "bold",
-        color: colors.red,
-    },
-
     detailsBtnTxt: {
         textTransform: "uppercase",
         fontSize: 14,
         fontWeight: "bold",
         color: colors.white,
-    },
-
-    saveTxt: {
-        textTransform: "uppercase",
-        fontWeight: "bold",
-        color: colors.white,
-    },
-
-    uploadText: {
-        color: colors.black,
-        textTransform: "uppercase",
-        fontWeight: "bold"
-    },
-
-    fileSize: {
-        color: colors.primary,
-        fontSize: 10,
-        fontWeight: "300",
-        marginVertical: 5,
-        padding: 2,
     },
 
     movieAvalicoesText: {
@@ -298,11 +250,6 @@ const theme = StyleSheet.create({
         paddingRight: 20,
     },
 
-    priceContainer: {
-        flexDirection: "row",
-        marginTop: 10,
-    },
-
     inputContainer: {
         width: "100%",
         height: 80,
@@ -338,19 +285,6 @@ const theme = StyleSheet.create({
         borderBottomColor: colors.borderGray,
     },
 
-    detailsContainer: {
-        backgroundColor: colors.white,
-        padding: 20,
-    },
-
-    gobackContainer: {
-        width: 290,
-        flexDirection: "row",
-        alignItems: "center",
-        marginVertical: 10,
-        justifyContent: "flex-start",
-    },
-
     detailCard: {
         width: "100%",
         height: 755,
@@ -378,19 +312,6 @@ const theme = StyleSheet.create({
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
         marginBottom: 20,
-    },
-
-    productImageContainer: {
-        width: "100%",
-        borderWidth: 1,
-        borderColor: colors.lightGray,
-        alignItems: "center",
-        borderRadius: 20,
-    },
-
-    productImage: {
-        width: 220,
-        height: 220,
     },
 
     scrollTextContainer: {
@@ -455,23 +376,6 @@ const theme = StyleSheet.create({
 
     },
 
-    buttonContainer: {
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "space-around",
-    },
-
-    deleteBtn: {
-        width: "48%",
-        height: 40,
-        borderWidth: 1,
-        borderColor: colors.red,
-        marginVertical: 10,
-        alignItems: "center",
-        justifyContent: "center",
-        borderRadius: 10,
-    },
-
     detailsBtn: {
         width: "90%",
         height: 40,
@@ -482,72 +386,6 @@ const theme = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center",
         borderRadius: 10,
-    },
-
-    formContainer: {
-        width: deviceWidth,
-        padding: 20,
-    },
-
-    formCard: {
-        width: "100%",
-        height: "90%",
-        backgroundColor: colors.white,
-        padding: 20,
-        borderRadius: 20,
-        alignItems: "center",
-        justifyContent: "space-around",
-        shadowColor: colors.black,
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-    },
-
-    modalContainer: {
-        width: deviceWidth,
-        height: deviceHeight,
-        backgroundColor: "#00000033",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-
-    modalContent: {
-        width: 300,
-        alignItems: "center",
-        justifyContent: "center",
-        marginTop: "50%",
-        backgroundColor: colors.white,
-        borderRadius: 20,
-        padding: 20,
-        shadowColor: colors.black,
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 5,
-    },
-
-    modalItem: {
-        width: "100%",
-        backgroundColor: colors.lightGray,
-        padding: 10,
-        marginVertical: 5,
-        borderRadius: 5,
-    },
-
-    formInput: {
-        width: 290,
-        height: 50,
-        borderWidth: 1,
-        borderColor: colors.mediumGray,
-        borderRadius: 10,
-        padding: 10,
-        marginVertical: 15,
     },
 
     textArea: {
@@ -575,48 +413,6 @@ const theme = StyleSheet.create({
         color: colors.lighterMediumGray,
     },
 
-    selectInput: {
-        width: 290,
-        height: 50,
-        borderWidth: 1,
-        borderColor: colors.mediumGray,
-        borderRadius: 10,
-        padding: 10,
-        marginVertical: 15,
-        justifyContent: "center",
-    },
-
-    uploadBtn: {
-        width: "100%",
-        height: 40,
-        color: colors.mediumGray,
-        borderRadius: 5,
-        alignItems: "center",
-        justifyContent: "center",
-    },
-
-    cancelBtn: {
-        marginLeft: -20,
-        width: deviceWidth / 3,
-        height: 40,
-        borderWidth: 1,
-        borderColor: colors.red,
-        marginVertical: 10,
-        alignItems: "center",
-        justifyContent: "center",
-        borderRadius: 10,
-    },
-
-    saveBtn: {
-        width: deviceWidth / 3,
-        height: 40,
-        backgroundColor: colors.primary,
-        marginVertical: 10,
-        alignItems: "center",
-        justifyContent: "center",
-        borderRadius: 10,
-    },
-
     reviewContainer: {
         marginHorizontal: 20,
     },
@@ -629,42 +425,25 @@ const theme = StyleSheet.create({
 
     reviewStar: {
     },
+
+    backButtonHeaderTextContainer:{
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        alignItems: "flex-start",
+    },
 });
 
 const nav = StyleSheet.create({
     leftText: {
         color: colors.black,
         fontWeight: "bold",
-        marginLeft: 10,
+        marginLeft: 50,
     },
 
-    drawer: {
-        marginRight: 10
-    },
-
-    options: {
-        width: deviceWidth,
-        height: 120,
-        backgroundColor: colors.primary,
-        marginTop: 125,
-        marginRight: -20,
-        padding: 20,
-        justifyContent: 'space-between',
-        zIndex: 10,
-        elevation: 10,
-    },
-
-    option: {
-        paddingVertical: 5,
-    },
-
-    textOption: {
-        color: colors.white,
-        textTransform: "uppercase",
-    },
-
-    textActive: {
+    leftTextOnBackButton: {
+        color: colors.black,
         fontWeight: "bold",
+        marginLeft: 10,
     },
 
     logoutBtn: {
@@ -688,41 +467,12 @@ const tabbar = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-around"
     },
-
-    pill: {
-        padding: 15,
-        backgroundColor: colors.lightGray,
-        borderRadius: 30,
-    },
-
-    pillActive: {
-        backgroundColor: colors.bluePill,
-    },
-
-    pillText: {
-        fontWeight: "bold",
-        color: colors.mediumGray,
-    },
-
-    pillTextActive: {
-
-    },
 })
 
 const admin = StyleSheet.create({
     container: {
         padding: 10,
         alignItems: "center",
-    },
-
-    addButton: {
-        width: deviceWidth - 20,
-        height: 50,
-        backgroundColor: colors.primary,
-        margin: 10,
-        borderRadius: 10,
-        alignItems: "center",
-        justifyContent: "center",
     },
 })
 
