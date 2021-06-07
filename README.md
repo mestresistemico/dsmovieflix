@@ -28,7 +28,8 @@ A aplicação consiste em um catálogo de filmes acessados via web e mobile, que
 - React Native
 ## Implantação em produção
 - Back end: Heroku
-(a implementar)- Front end web: Netlify
+- Front end web: Netlify
+- Front end mobie: apk android neste repo
 - Banco de dados: Postgresql
 
 # Como executar o projeto
@@ -62,6 +63,15 @@ yarn install
 
 # executar o projeto
 yarn start
+```
+
+## Front end mobile
+Pré-requisitos: android
+
+```bash
+# Efetuar download do apk para instalação no android no repo https://github.com/mestresistemico/dsmovieflix/tree/main/frontend-mobile
+
+# Enviar para smartphone e instalar
 ```
 
 # Autor
