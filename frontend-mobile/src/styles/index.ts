@@ -216,7 +216,7 @@ const theme = StyleSheet.create({
 
     movieCard: {
         height: 450,
-        width: "100%",
+        width: 360,
         backgroundColor: colors.lightMediumGray,
         borderRadius: 10,
         shadowColor: colors.black,
@@ -286,7 +286,7 @@ const theme = StyleSheet.create({
     },
 
     detailCard: {
-        width: "100%",
+        width: 365,
         height: 755,
         marginBottom: 20,
         backgroundColor: colors.lightMediumGray,
@@ -301,7 +301,7 @@ const theme = StyleSheet.create({
     },
 
     reviewCard: {
-        width: "100%",
+        width: 365,
         backgroundColor: colors.lightMediumGray,
         borderRadius: 10,
         shadowColor: colors.black,

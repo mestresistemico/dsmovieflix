@@ -96,10 +96,12 @@ const MovieDetails = ({ route: { params: { id } } }) => {
                                 <View style={theme.movieDescription}>
                                     <Text style={text.movieAvalicoesText}>
                                         Avaliações
-                            </Text>
+                                    </Text> 
                                 </View>
                                 {movie.reviews?.map((review) => (
-                                    <ReviewCard reviewText={review.text} reviewUsername={review.userName} />))}
+                                    <ReviewCard reviewText={review.text} 
+                                    reviewUsername={review.userName} 
+                                    key={review.id}/>))}
                             </View> : null
                         }
                     </ScrollView>
